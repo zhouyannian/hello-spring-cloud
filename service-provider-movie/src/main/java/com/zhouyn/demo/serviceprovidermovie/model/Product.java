@@ -1,4 +1,4 @@
-package com.zhouyn.demo.serviceProvider.model;
+package com.zhouyn.demo.serviceprovidermovie.model;
 
 
 import lombok.AllArgsConstructor;
@@ -14,8 +14,8 @@ import lombok.ToString;
  * @since 1.0.0
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Product {
 

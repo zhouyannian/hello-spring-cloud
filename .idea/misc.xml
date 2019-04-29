@@ -8,7 +8,15 @@
         <option value="$PROJECT_DIR$/service-provider/pom.xml" />
         <option value="$PROJECT_DIR$/service-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/service-consumer-movie/pom.xml" />
+        <option value="$PROJECT_DIR$/service-provider-movie/pom.xml" />
+        <option value="$PROJECT_DIR$/service-geteway/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/config-center-server/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="PreferredVcsStorage">

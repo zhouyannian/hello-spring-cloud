@@ -1,4 +1,4 @@
-package com.zhouyn.demo.serviceProvider.api;
+package com.zhouyn.demo.serviceprovidermovie.api;
 
 import com.netflix.appinfo.EurekaInstanceConfig;
 import org.slf4j.Logger;
