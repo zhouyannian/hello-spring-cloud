@@ -15,7 +15,7 @@ import java.util.List;
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */
-@FeignClient(name = "SERVICE-PROVIDER")
+@FeignClient(name = "service-provider")
 public interface ProductService {
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
