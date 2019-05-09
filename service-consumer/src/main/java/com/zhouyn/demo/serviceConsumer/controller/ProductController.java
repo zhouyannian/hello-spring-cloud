@@ -1,6 +1,5 @@
 package com.zhouyn.demo.serviceConsumer.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zhouyn.demo.serviceConsumer.service.ProductService;
 import com.zhouyn.demo.serviceProvider.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +28,7 @@ public class ProductController {
         return this.productService.findAll();
     }
 
-    @HystrixCommand(fallbackMethod = "detailForback")
+    //@HystrixCommand(fallbackMethod = "detailForback")
     @RequestMapping(value = "/{itemCode}", method = RequestMethod.GET)
     public Product detail(@PathVariable String itemCode) {
         return this.productService.loadByItemCode(itemCode);
