@@ -2,7 +2,7 @@ package com.zhouyn.demo.servicesecurityoauth2.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
+//import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -48,7 +48,7 @@ public class OAuth2ServerConfig {
         @Autowired
         AuthenticationManager authenticationManager;
         @Autowired
-        RedisConnectionFactory redisConnectionFactory;
+        //RedisConnectionFactory redisConnectionFactory;
 
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
@@ -69,10 +69,10 @@ public class OAuth2ServerConfig {
 
         @Override
         public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-            endpoints
-                    .tokenStore(new RedisTokenStore(redisConnectionFactory))
-                    .authenticationManager(authenticationManager)
-                    .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);
+//            endpoints
+//                    .tokenStore(new RedisTokenStore(redisConnectionFactory))
+//                    .authenticationManager(authenticationManager)
+//                    .allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST);POST
         }
 
         @Override
