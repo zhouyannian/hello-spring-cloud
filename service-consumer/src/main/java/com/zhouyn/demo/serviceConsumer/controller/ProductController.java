@@ -26,6 +26,7 @@ public class ProductController {
 
     @RequestMapping(method = RequestMethod.GET)
     public List<Product> list() {
+
         return this.productService.findAll();
     }
 

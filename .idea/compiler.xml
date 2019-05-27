@@ -15,8 +15,8 @@
         <module name="service-provider-movie" />
         <module name="oauth2-server" />
         <module name="service-provider" />
-        <module name="service-consumer-movie" />
         <module name="spring-boot-admin-server" />
+        <module name="service-consumer-movie" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

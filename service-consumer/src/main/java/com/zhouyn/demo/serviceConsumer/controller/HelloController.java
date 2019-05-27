@@ -18,4 +18,12 @@ public class HelloController {
 
         return "Hello, I am SERVICE-CONSUMER";
     }
+
+    @RequestMapping(value = "/order", method = RequestMethod.GET)
+    public String order() {
+
+        //return restTemplate.getForEntity("http://SERVICE-PROVIDER/hello", String.class).getBody();
+
+        return "Order is 10001.";
+    }
 }

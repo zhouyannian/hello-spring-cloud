@@ -1,33 +1,32 @@
-package com.zhouyn.demo.oauth2Server.config;
+package com.zhouyn.demo.serviceConsumer.config;
 
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
-@Order(SecurityProperties.BASIC_AUTH_ORDER - 3)
-public class OAuthWebScurityConfigurer extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Override
     @Bean
+    @Override
+    public UserDetailsService userDetailsServiceBean() throws Exception {
+        return super.userDetailsServiceBean();
+    }
+
+    @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
 
     @Override
-    @Bean
-    public UserDetailsService userDetailsServiceBean() throws Exception {
-        return super.userDetailsServiceBean();
-    }
-
-    @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        super.configure(auth);
+        //super.configure(auth);
 
         auth.inMemoryAuthentication()
                 .withUser("zhouyn")
@@ -37,5 +36,20 @@ public class OAuthWebScurityConfigurer extends WebSecurityConfigurerAdapter {
                 .withUser("admin")
                 .password("{noop}admin")
                 .roles("USER","ADMIN");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        //super.configure(http);
+        http.csrf().disable();
+        http.authorizeRequests()
+                .antMatchers(HttpMethod.GET, "/order/**")
+                .hasRole("ADMIN")
+                .anyRequest()
+                .authenticated()
+                .and()
+                .httpBasic();
+
+
     }
 }

@@ -52,7 +52,7 @@ public class OAuth2ServerConfig {
 
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-            //配置两个客户端,一个用于password认证一个用于client认证
+            // 配置两个客户端,一个用于password认证一个用于client认证
             clients.inMemory().withClient("client_1")
                     .resourceIds(DEMO_RESOURCE_ID)
                     .authorizedGrantTypes("client_credentials", "refresh_token")
