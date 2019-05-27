@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="JavaScriptSettings">
-    <option name="languageLevel" value="ES6" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -15,9 +12,6 @@
         <option value="$PROJECT_DIR$/service-provider-movie/pom.xml" />
         <option value="$PROJECT_DIR$/service-geteway/pom.xml" />
         <option value="$PROJECT_DIR$/service-security-oauth2/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-admin-server/pom.xml" />
-        <option value="$PROJECT_DIR$/hystrix-dashboard-turbine/pom.xml" />
-        <option value="$PROJECT_DIR$/apollo-client/pom.xml" />
         <option value="$PROJECT_DIR$/oauth2-server/pom.xml" />
       </list>
     </option>
@@ -30,7 +24,7 @@
   <component name="PreferredVcsStorage">
     <preferredVcsName>ApexVCS</preferredVcsName>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

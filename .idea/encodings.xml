@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/../AirPortIT_ASCII_Proj/sae_v2_serveradmin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/apollo-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/hystrix-dashboard-turbine" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/oauth2-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-consumer-movie" charset="UTF-8" />
@@ -13,6 +10,5 @@
     <file url="file://$PROJECT_DIR$/service-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-provider-movie" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/service-security-oauth2" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-admin-server" charset="UTF-8" />
   </component>
 </project>

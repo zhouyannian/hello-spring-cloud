@@ -22,7 +22,7 @@ public class OAuthConfig extends AuthorizationServerConfigurerAdapter {
 
         clients.inMemory()
                 .withClient("oauth2-client")
-                .secret("{noop}123456")
+                .secret("zhouyn")
                 .authorizedGrantTypes("refresh_token", "password", "client_credentials")
                 .scopes("web-client","mobile-client");
     }
