@@ -1,4 +1,4 @@
-package com.zhouyn.demo.serviceProvider.model;
+package com.zhouyn.demo.serviceProvider.entity;
 
 
 import lombok.AllArgsConstructor;

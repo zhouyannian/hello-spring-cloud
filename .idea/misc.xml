@@ -13,6 +13,7 @@
         <option value="$PROJECT_DIR$/service-geteway/pom.xml" />
         <option value="$PROJECT_DIR$/service-security-oauth2/pom.xml" />
         <option value="$PROJECT_DIR$/oauth2-server/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

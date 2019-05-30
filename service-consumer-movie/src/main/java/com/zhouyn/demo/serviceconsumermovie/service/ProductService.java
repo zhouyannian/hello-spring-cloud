@@ -1,6 +1,6 @@
 package com.zhouyn.demo.serviceconsumermovie.service;
 
-import com.zhouyn.demo.serviceProvider.model.Product;
+import com.zhouyn.demo.serviceProvider.entity.Product;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,7 +1,7 @@
 package com.zhouyn.demo.serviceconsumermovie.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.zhouyn.demo.serviceProvider.model.Product;
+import com.zhouyn.demo.serviceProvider.entity.Product;
 import com.zhouyn.demo.serviceconsumermovie.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;

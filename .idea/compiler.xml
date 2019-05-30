@@ -14,6 +14,7 @@
         <module name="service-provider-movie" />
         <module name="service-provider" />
         <module name="service-consumer-movie" />
+        <module name="zipkin-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -30,6 +31,7 @@
       <module name="service-provider" options="-parameters" />
       <module name="service-provider-movie" options="-parameters" />
       <module name="service-security-oauth2" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
 </project>

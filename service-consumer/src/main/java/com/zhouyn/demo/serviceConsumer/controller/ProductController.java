@@ -2,7 +2,7 @@ package com.zhouyn.demo.serviceConsumer.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zhouyn.demo.serviceConsumer.service.ProductService;
-import com.zhouyn.demo.serviceProvider.model.Product;
+import com.zhouyn.demo.serviceProvider.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.zhouyn.demo.serviceConsumer.service;
 
-import com.zhouyn.demo.serviceProvider.entity.Product;
+import com.zhouyn.demo.serviceProvider.entity.Coffee;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,11 +16,11 @@ import java.util.List;
  * @since 1.0.0
  */
 @FeignClient(name = "service-provider")
-public interface ProductService {
+public interface CoffeeService {
 
-    @RequestMapping(value = "/product", method = RequestMethod.GET)
-    List<Product> findAll();
+    @RequestMapping(value = "/coffee", method = RequestMethod.GET)
+    List<Coffee> findAll();
 
-    @RequestMapping(value = "/product/{itemCode}", method = RequestMethod.GET)
-    Product loadByItemCode(@PathVariable("itemCode") String itemCode);
+    @RequestMapping(value = "/coffee/{id}", method = RequestMethod.GET)
+    Coffee loadByItemCode(@PathVariable("id") String id);
 }

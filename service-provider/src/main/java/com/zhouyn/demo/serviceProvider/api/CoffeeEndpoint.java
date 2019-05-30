@@ -1,8 +1,9 @@
 package com.zhouyn.demo.serviceProvider.api;
 
+import com.zhouyn.demo.serviceProvider.entity.Coffee;
 import com.zhouyn.demo.serviceProvider.entity.Product;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.zhouyn.demo.serviceProvider.repository.CoffeeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,24 +20,20 @@ import java.util.List;
  * @since 1.0.0
  */
 @RestController
-@RequestMapping("/product")
-public class ProductEndpoint {
-    protected Logger logger = LoggerFactory.getLogger(ProductEndpoint.class);
+@RequestMapping("/coffee")
+public class CoffeeEndpoint {
+
+    @Autowired
+    private CoffeeRepository coffeeRepository;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Product> list(){
-        return this.buildProducts();
+    public List<Coffee> list(){
+        return coffeeRepository.findAll();
     }
 
-    @RequestMapping(value = "/{itemCode}", method = RequestMethod.GET)
-    public Product getProductById(@PathVariable String itemCode) {
-        List<Product> products = this.buildProducts();
-        for (Product product : products) {
-            if (product.getItemCode().equalsIgnoreCase(itemCode)) {
-                return product;
-            }
-        }
-        return null;
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Coffee getProductById(@PathVariable String id) {
+        return coffeeRepository.findById(Long.parseLong(id)).get();
     }
 
     protected List<Product> buildProducts() {
