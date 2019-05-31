@@ -1,5 +1,6 @@
 package com.zhouyn.demo.serviceConsumer.controller;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import com.zhouyn.demo.serviceConsumer.service.CoffeeService;
 import com.zhouyn.demo.serviceProvider.entity.Coffee;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 
 /**
  * Hello Sprin Cloud -- Product Controller

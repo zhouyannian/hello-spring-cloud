@@ -18,7 +18,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="apollo-client" target="1.8" />
       <module name="config-center-server" target="1.8" />
+      <module name="hystrix-dashboard-turbine" target="1.8" />
+      <module name="oauth-demo" target="1.8" />
+      <module name="spring-boot-admin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
