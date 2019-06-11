@@ -12,9 +12,23 @@
 
     <groupId>com.zhouyn.demo</groupId>
     <artifactId>hello-spring-cloud</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>apollo-client</module>
+        <module>eureka-server</module>
+        <module>hystrix-dashboard-turbine</module>
+        <module>oauth2-server</module>
+        <module>redis-server</module>
+        <module>service-consumer</module>
+        <module>service-consumer-movie</module>
+        <module>service-geteway</module>
+        <module>service-provider</module>
+        <module>service-provider-movie</module>
+        <module>service-security-oauth2</module>
+        <module>zipkin-server</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <swagger.version>2.9.2</swagger.version>

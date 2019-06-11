@@ -1,19 +1,15 @@
 package com.zhouyn.demo.serviceConsumer.controller;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zhouyn.demo.serviceConsumer.entity.User;
-import com.zhouyn.demo.serviceConsumer.service.ProductService;
-import com.zhouyn.demo.serviceProvider.entity.Product;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
 /**
- * Hello Sprin Cloud -- Product Controller
+ * Hello Spring Cloud -- Product Controller
  *
  * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
@@ -24,7 +20,7 @@ import java.util.*;
 public class UserController {
 
     // 创建线程安全的Map
-    static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
+   static Map<Long, User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
     @ApiOperation(value = "获取用户列表", notes = "")
     @RequestMapping(value = "/", method = RequestMethod.GET)

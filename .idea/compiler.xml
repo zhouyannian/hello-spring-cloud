@@ -6,29 +6,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service-security-oauth2" />
-        <module name="eureka-server" />
-        <module name="service-geteway" />
-        <module name="service-consumer" />
-        <module name="oauth2-server" />
-        <module name="service-provider-movie" />
-        <module name="service-provider" />
-        <module name="service-consumer-movie" />
         <module name="zipkin-server" />
+        <module name="eureka-server" />
+        <module name="service-security-oauth2" />
+        <module name="service-consumer" />
+        <module name="service-provider" />
+        <module name="apollo-client" />
+        <module name="redis-server" />
+        <module name="service-provider-movie" />
+        <module name="oauth2-server" />
+        <module name="service-geteway" />
+        <module name="service-consumer-movie" />
+        <module name="hystrix-dashboard-turbine" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="apollo-client" target="1.8" />
       <module name="config-center-server" target="1.8" />
-      <module name="hystrix-dashboard-turbine" target="1.8" />
       <module name="oauth-demo" target="1.8" />
+      <module name="oauth2-server (1)" target="1.8" />
       <module name="spring-boot-admin-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="apollo-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="hystrix-dashboard-turbine" options="-parameters" />
       <module name="oauth2-server" options="" />
+      <module name="oauth2-server (1)" options="-parameters" />
+      <module name="redis-server" options="-parameters" />
       <module name="service-consumer" options="-parameters" />
       <module name="service-consumer-movie" options="-parameters" />
       <module name="service-geteway" options="-parameters" />

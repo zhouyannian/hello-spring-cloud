@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/service-security-oauth2/pom.xml" />
         <option value="$PROJECT_DIR$/oauth2-server/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/redis-server/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -25,7 +26,7 @@
   <component name="PreferredVcsStorage">
     <preferredVcsName>ApexVCS</preferredVcsName>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="JDK1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
