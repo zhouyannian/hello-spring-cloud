@@ -9,6 +9,8 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.client.RestTemplate;
@@ -21,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableTurbine
 @EnableAspectJAutoProxy
 @EnableCaching
+@EnableBinding(Source.class)
 public class ServiceConsumerApplication {
 
     @Bean
