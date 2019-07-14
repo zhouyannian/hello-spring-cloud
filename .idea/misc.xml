@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/redis-server/pom.xml" />
         <option value="$PROJECT_DIR$/kafka-producer/pom.xml" />
         <option value="$PROJECT_DIR$/kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/sso-client/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

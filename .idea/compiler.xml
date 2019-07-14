@@ -12,6 +12,7 @@
         <module name="apollo-client" />
         <module name="service-provider-movie" />
         <module name="service-provider" />
+        <module name="sso-client" />
         <module name="kafka-consumer" />
         <module name="zipkin-server" />
         <module name="hystrix-dashboard-turbine" />
@@ -45,6 +46,7 @@
       <module name="service-provider" options="-parameters" />
       <module name="service-provider-movie" options="-parameters" />
       <module name="service-security-oauth2" options="-parameters" />
+      <module name="sso-client" options="-parameters" />
       <module name="zipkin-server" options="-parameters" />
     </option>
   </component>
