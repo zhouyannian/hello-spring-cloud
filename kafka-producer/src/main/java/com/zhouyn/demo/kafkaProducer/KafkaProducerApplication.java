@@ -1,14 +1,13 @@
 package com.zhouyn.demo.kafkaProducer;
 
-import com.zhouyn.demo.kafkaProducer.service.OutputMessageService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.kafka.annotation.EnableKafka;
 
 @SpringBootApplication
-@EnableEurekaClient
-@EnableBinding(OutputMessageService.class)
+//@EnableEurekaClient
+//@EnableBinding(OutputMessageService.class)
+@EnableKafka
 public class KafkaProducerApplication {
 
     public static void main(String[] args) {
