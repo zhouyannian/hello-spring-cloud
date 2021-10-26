@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      acks: -1
+  datasource:
+    url: jdbc:mysql://118.24.26.31:3306/flyway?useSSL=false
+    username: zhouyn
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 172.28.36.117
+    port: 6379
+    database: 0
+
+server:
+  port: 8080
