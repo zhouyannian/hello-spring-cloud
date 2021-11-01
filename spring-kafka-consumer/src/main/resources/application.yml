@@ -1,0 +1,31 @@
+server:
+  port: 8090
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: user-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          kafka:
+            properties:
+              max:
+                poll:
+                  interval:
+                    ms: 3000
+      enable-auto-commit: false
+    listener:
+      ack-mode: manual
+      poll-timeout: 3000
+  datasource:
+    url: jdbc:mysql://118.24.26.31:3306/flyway?useSSL=false
+    username: zhouyn
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 172.28.36.117
+    port: 6379
+    database: 0
