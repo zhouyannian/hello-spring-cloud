@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Hello Sprin Cloud -- Product Service
  *
- * @author zhouyn(zhouyannian@163.com)
+ * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */
@@ -24,7 +24,7 @@ public class ProductEndpoint {
     protected Logger logger = LoggerFactory.getLogger(ProductEndpoint.class);
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Product> list(){
+    public List<Product> list() {
         return this.buildProducts();
     }
 

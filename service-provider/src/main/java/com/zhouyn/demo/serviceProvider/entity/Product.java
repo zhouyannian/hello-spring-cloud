@@ -9,7 +9,7 @@ import lombok.ToString;
 /**
  * Product实体类
  *
- * @author zhouyn(zhouyannian@163.com)
+ * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */
