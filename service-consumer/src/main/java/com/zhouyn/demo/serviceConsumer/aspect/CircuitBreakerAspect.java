@@ -20,18 +20,18 @@ public class CircuitBreakerAspect {
     private Map<String, AtomicInteger> breakCounter = new ConcurrentHashMap<>();
 
     @Around("execution(* com.zhouyn.demo.serviceConsumer.service..*(..))")
-    public Object doWithCircuitBreaker(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
+    public Object doWithCircuitBreaker(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         String signature = proceedingJoinPoint.getSignature().toLongString();
         log.info("Invoke {}", signature);
         Object retVal;
-        try{
+        try {
             if (counter.containsKey(signature)) {
                 if (counter.get(signature).get() > THRESHOLD && breakCounter.get(signature).get() < THRESHOLD) {
                     log.warn("Circuit breaker return null, break {} times.", breakCounter.get(signature).incrementAndGet());
                     return null;
 
                 }
-            }else {
+            } else {
                 counter.put(signature, new AtomicInteger(0));
                 breakCounter.put(signature, new AtomicInteger(0));
             }
@@ -39,7 +39,7 @@ public class CircuitBreakerAspect {
             counter.get(signature).set(0);
             breakCounter.get(signature).set(0);
 
-        }catch (Throwable t) {
+        } catch (Throwable t) {
             log.warn("Cicuit breaker counter: {}, Throwable {}", counter.get(signature).incrementAndGet(), t.getMessage());
             breakCounter.get(signature).set(0);
             throw t;

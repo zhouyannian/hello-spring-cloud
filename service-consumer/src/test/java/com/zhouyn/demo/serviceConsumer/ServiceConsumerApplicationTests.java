@@ -26,7 +26,6 @@ public class ServiceConsumerApplicationTests {
         System.out.println("获取缓存中key为" + key + "的值为：" + redisTemplate.opsForValue().get(key));
 
 
-
     }
 
 }

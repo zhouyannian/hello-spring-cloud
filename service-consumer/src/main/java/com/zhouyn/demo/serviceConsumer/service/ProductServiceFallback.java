@@ -3,7 +3,7 @@ package com.zhouyn.demo.serviceConsumer.service;
 /**
  * Hello Sprin Cloud -- Product Service Fallback
  *
- * @author zhouyn(zhouyannian@163.com)
+ * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */

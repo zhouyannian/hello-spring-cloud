@@ -63,17 +63,22 @@ public class UserController {
     @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long")
     @DeleteMapping(value = "/{id}")
     public String deleteUser(@PathVariable Long id) {
-         userService.deleteUser(id);
-         return "success";
+        userService.deleteUser(id);
+        return "success";
     }
 
     @GetMapping(value = "/redis")
-    public String getKeys(){
+    public String getKeys() {
         return redisTemplate.keys("*").toString();
     }
 
     @GetMapping(value = "/redis/{key}")
-    public String getValue(@PathVariable String key){
+    public String getValue(@PathVariable String key) {
         return redisTemplate.opsForValue().get(key).toString();
+    }
+
+    @GetMapping(value = "/test")
+    public String testThread() {
+        return userService.testThread();
     }
 }

@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Hello Sprin Cloud -- Product Controller
  *
- * @author zhouyn(zhouyannian@163.com)
+ * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */
@@ -32,7 +32,7 @@ public class CoffeeController {
     }
 
     @RequestMapping(value = "/coffee/{id}", method = RequestMethod.GET)
-    public Coffee loadByItemCode(@PathVariable("id") String id){
+    public Coffee loadByItemCode(@PathVariable("id") String id) {
         return coffeeService.loadByItemCode(id);
     }
 

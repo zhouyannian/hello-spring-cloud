@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Hello Sprin Cloud -- Product Controller
  *
- * @author zhouyn(zhouyannian@163.com)
+ * @author zhouyn(zhouyannian @ 163.com)
  * @data 2019年4月24日下午10点45分
  * @since 1.0.0
  */
@@ -37,7 +37,7 @@ public class ProductController {
     }
 
     public Product detailForback(String itemCode) {
-        Product product = new Product("0001","service-consumer", "Hystrix断路器",9999);
+        Product product = new Product("0001", "service-consumer", "Hystrix断路器", 9999);
         return product;
     }
 }

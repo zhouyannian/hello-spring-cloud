@@ -16,4 +16,6 @@ public interface UserService {
 
     void deleteUser(Long id);
 
+    String testThread();
+
 }

@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-    @Cacheable(value = "users",key = "#id")
+    @Cacheable(value = "users", key = "#id")
     @Override
     public User findUserById(Long id) {
         return userRepository.findById(id).get();
@@ -45,5 +45,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+    }
+
+    @Override
+    public String testThread() {
+        System.out.println(Thread.currentThread().getName());
+
+        return Thread.currentThread().getName();
     }
 }
